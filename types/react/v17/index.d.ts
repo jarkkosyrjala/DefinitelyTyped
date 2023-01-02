@@ -1339,10 +1339,12 @@ declare namespace React {
     }
 
     interface DOMAttributes<T> {
+        // React-specific Attributes
         children?: ReactNode | undefined;
         dangerouslySetInnerHTML?: {
             __html: string;
         } | undefined;
+        suppressHydrationWarning?: boolean | undefined;
 
         // Clipboard Events
         onCopy?: ClipboardEventHandler<T> | undefined;
@@ -1814,7 +1816,6 @@ declare namespace React {
         defaultChecked?: boolean | undefined;
         defaultValue?: string | number | ReadonlyArray<string> | undefined;
         suppressContentEditableWarning?: boolean | undefined;
-        suppressHydrationWarning?: boolean | undefined;
 
         // Standard HTML Attributes
         accessKey?: string | undefined;
